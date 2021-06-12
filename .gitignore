@@ -11,6 +11,9 @@ local.properties
 .loadpath
 .recommenders
 
+# JDT-specific (Eclipse Java Development Tools)     
+.classpath
+
 # drivers
 Drivers/
 
@@ -23,14 +26,6 @@ screenshots/
 # Locally stored "Eclipse launch configurations"
 *.launch
 
-# PyDev specific (Python IDE for Eclipse)
-*.pydevproject
-
-# CDT-specific (C/C++ Development Tooling)
-.cproject
-
-# CDT- autotools
-.autotools
 
 # Java annotation processor (APT)
 .factorypath
@@ -41,14 +36,7 @@ screenshots/
 # sbteclipse plugin
 .target
 
-# Tern plugin
-.tern-project
 
-# TeXlipse plugin
-.texlipse
-
-# STS (Spring Tool Suite)
-.springBeans
 
 # Code Recommenders
 .recommenders/
@@ -64,7 +52,7 @@ screenshots/
 
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
-#.project
+.project
 
 ### Eclipse Patch ###
 # Spring Boot Tooling
