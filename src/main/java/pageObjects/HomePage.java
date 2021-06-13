@@ -40,4 +40,9 @@ public class HomePage {
 		driver.findElement(cellPhonesSubCategory).click();
 		return new CellPhones(driver);
 	}
+	
+	public NotebooksPage navigateToNotebooksPage() {
+		driver.get("https://demo.nopcommerce.com/notebooks");
+		return new NotebooksPage(driver);
+	}
 }
