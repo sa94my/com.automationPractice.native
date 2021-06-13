@@ -8,8 +8,7 @@ import java.util.Properties;
 public class PropertiesLoader {
 
 	
-	
-	public static Properties loadProperties(String PropertiesFilePath) {
+	public static  Properties loadProperties(String PropertiesFilePath) {
 		Properties propertiesFile = new Properties();
 		try {
 			FileInputStream inputStream = new FileInputStream(PropertiesFilePath);
@@ -21,7 +20,7 @@ public class PropertiesLoader {
 			System.out.println("error reading from properties file ");
 			e.printStackTrace();
 		}
-		return null;
+		return propertiesFile;
 	
 	}
 }
