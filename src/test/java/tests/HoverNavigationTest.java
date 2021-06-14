@@ -4,10 +4,10 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
-import pageObjects.CellPhones;
+import page.objects.CellPhones;
 
 public class HoverNavigationTest extends TestBase{
-	CellPhones cellPhonesPageObject ;
+	private CellPhones cellPhonesPageObject ;
 
 	/*
 	 * this test needs to be changed, it fails on headless browsers

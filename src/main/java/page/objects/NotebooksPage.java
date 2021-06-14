@@ -1,4 +1,4 @@
-package pageObjects;
+package page.objects;
 
 import java.time.Duration;
 
@@ -14,13 +14,14 @@ public class NotebooksPage {
 	private WebDriverWait wait ;
 	private Select sortingDropDown ;
 
+	private By sortBy = By.id("products-orderby");
+	private By firstProduct = By.xpath("(//div[@class='product-item'])[1]");
 	
 	public NotebooksPage(WebDriver driver) {
 		this.driver =driver;
 	}
 	
-	private By sortBy = By.id("products-orderby");
-	private By firstProduct = By.xpath("(//div[@class='product-item'])[1]");
+	
 	
 	
 	public String getNameOfFirstProduct() {

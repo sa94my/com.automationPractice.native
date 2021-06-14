@@ -1,4 +1,4 @@
-package pageObjects;
+package page.objects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,13 +10,15 @@ public class RegisterationPage {
 	private WebDriver driver ;
 	private WebDriverWait wait ;
 	
+	private By firstNameField = By.id("FirstName");
+	private By lastNameField = By.id("LastName");
+	private By emailField = By.id("Email");
+	
 	public RegisterationPage(WebDriver driver) {
 		this.driver =driver;
 	}
 	
-	private By firstNameField = By.id("FirstName");
-	private By lastNameField = By.id("LastName");
-	private By emailField = By.id("Email");
+	
 	
 	public void registerUser(String firstName,String lastName,String email) {
 		wait.until(ExpectedConditions.presenceOfElementLocated(firstNameField));

@@ -1,4 +1,4 @@
-package pageObjects;
+package page.objects;
 
 import java.time.Duration;
 
@@ -14,14 +14,16 @@ public class HomePage {
 	private WebDriverWait wait ;
 	private Actions builder;
 	
-	public HomePage(WebDriver driver) {
-		this.driver =driver;
-	}
-	
 	private By registerLink = By.className("ico-register");
 	private By electronicsCategoryLink = By.xpath("//ul[contains(@class,'notmobile')] //a[contains(.,'Electronics')]");
 	private By cellPhonesSubCategory = By.xpath("//ul[contains(@class,'notmobile')] //a[contains(.,'Cell phones')]");
 	private By aboutUsLink = By.xpath("//a[contains(.,'About us')]");
+	
+	public HomePage(WebDriver driver) {
+		this.driver =driver;
+	}
+	
+	
 
 	
 	public RegisterationPage clickRegisterLink() {

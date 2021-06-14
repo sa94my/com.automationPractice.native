@@ -17,8 +17,8 @@ public class BrowserProperties {
 	private static String browserPropertiesFilePath = System.getProperty("user.dir")+"\\src\\main\\java\\properties\\browser.properties";
 	private static String browserName ;
 	private static boolean headless ;
-	static Properties browserOptions ;
-	PropertiesLoader p = new PropertiesLoader();
+	private static Properties browserOptions ;
+
 	
 	public static WebDriver getBrowserProperties() {
 		WebDriver driver;

@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import pageObjects.HomePage;
+import page.objects.HomePage;
 import properties.BrowserProperties;
 
 public class TestBase {

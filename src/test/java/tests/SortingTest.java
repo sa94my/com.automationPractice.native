@@ -3,14 +3,14 @@ package tests;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import pageObjects.NotebooksPage;
+import page.objects.NotebooksPage;
 
 public class SortingTest extends TestBase{
 
-	NotebooksPage notebooksPageObject ;
-	SoftAssert soft = new SoftAssert();
-	int sortingMethod = 3; // price low to high,when changed change first product id accordingly
-	String dataProductId = "7";
+	private NotebooksPage notebooksPageObject ;
+	private SoftAssert soft = new SoftAssert();
+	private int sortingMethod = 3; // price low to high,when changed change first product id accordingly
+	private String dataProductId = "7";
 	@Test
 	public void testSorting() {
 		notebooksPageObject = homeObject.navigateToNotebooksPage();
