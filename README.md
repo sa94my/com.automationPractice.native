@@ -1,6 +1,7 @@
 # com.automationPractice.native
-sample test automation scripts 
--- using native selenium <br/>
--- getting rid of pageFactory <br/>
--- attempting to apply best practices <br/>
--- exploring the page object model variations further <br/>
+### sample test automation scripts 
+- Using native selenium <
+- Getting rid of pageFactory 
+- Adding code Quality check
+- Attempting to apply best practices 
+- Axploring the page object model variations further 
