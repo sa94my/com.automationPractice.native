@@ -12,7 +12,6 @@ public class HomePage {
 
 	private WebDriver driver ;
 	private WebDriverWait wait ;
-	private Actions builder;
 	
 	private By registerLink = By.className("ico-register");
 	private By electronicsCategoryLink = By.xpath("//ul[contains(@class,'notmobile')] //a[contains(.,'Electronics')]");
@@ -34,6 +33,7 @@ public class HomePage {
 	}
 	
 	public void hoverOverElectronics() {
+		Actions builder;
 		builder = new Actions(driver);
 		builder.moveToElement(driver.findElement(electronicsCategoryLink)).perform();
 	}

@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import page.objects.CellPhones;
 
 public class HoverNavigationTest extends TestBase{
-	private CellPhones cellPhonesPageObject ;
 
 	/*
 	 * this test needs to be changed, it fails on headless browsers
@@ -15,6 +14,7 @@ public class HoverNavigationTest extends TestBase{
 	@Test
 	public void method() {
 		homeObject.hoverOverElectronics();
+		 CellPhones cellPhonesPageObject ;
 		cellPhonesPageObject = homeObject.chooseCellPhonesSubcategory();
 		assertEquals(cellPhonesPageObject.getPageTitle(), "Cell phones");
 	
