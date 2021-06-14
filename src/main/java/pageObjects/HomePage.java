@@ -21,6 +21,8 @@ public class HomePage {
 	private By registerLink = By.className("ico-register");
 	private By electronicsCategoryLink = By.xpath("//ul[contains(@class,'notmobile')] //a[contains(.,'Electronics')]");
 	private By cellPhonesSubCategory = By.xpath("//ul[contains(@class,'notmobile')] //a[contains(.,'Cell phones')]");
+	private By aboutUsLink = By.xpath("//a[contains(.,'About us')]");
+
 	
 	public RegisterationPage clickRegisterLink() {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(1));
@@ -44,5 +46,10 @@ public class HomePage {
 	public NotebooksPage navigateToNotebooksPage() {
 		driver.get("https://demo.nopcommerce.com/notebooks");
 		return new NotebooksPage(driver);
+	}
+	
+	public AboutUsPage navigateToAboutUsPage() {
+		driver.findElement(aboutUsLink).click();
+		return new AboutUsPage(driver);
 	}
 }
