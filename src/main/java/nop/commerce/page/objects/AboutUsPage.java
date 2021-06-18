@@ -17,4 +17,7 @@ public class AboutUsPage {
 		return driver.findElement(pageTitle).getText();
 	}
 	
+	
+	
+	
 }

@@ -16,4 +16,7 @@ public class CellPhones {
 	public String getPageTitle() {
 		return driver.findElement(pageTitle).getText();
 	}
+	
+	
+	
 }

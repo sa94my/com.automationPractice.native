@@ -32,7 +32,7 @@ public class BrowserProperties {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			options = new ChromeOptions();
-			if(headless == true) {
+			if(headless ) {
 				options.addArguments("--headless");
 			}
 			driver =new ChromeDriver(options);
@@ -60,7 +60,7 @@ public class BrowserProperties {
 		default:
 			WebDriverManager.chromedriver().setup();
 			options = new ChromeOptions();
-			if(headless == true) {
+			if(headless ) {
 				options.addArguments("--headless");
 			}
 			driver =new ChromeDriver(options);

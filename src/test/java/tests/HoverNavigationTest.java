@@ -4,8 +4,6 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
-import nop.commerce.page.objects.CellPhones;
-
 public class HoverNavigationTest extends TestBase{
 
 	/*
@@ -14,10 +12,8 @@ public class HoverNavigationTest extends TestBase{
 	@Test
 	public void method() {
 		homeObject.hoverOverElectronics();
-		 CellPhones cellPhonesPageObject ;
-		cellPhonesPageObject = homeObject.chooseCellPhonesSubcategory();
+		var cellPhonesPageObject = homeObject.chooseCellPhonesSubcategory();
 		assertEquals(cellPhonesPageObject.getPageTitle(), "Cell phones");
-	
 	}
 
 }
