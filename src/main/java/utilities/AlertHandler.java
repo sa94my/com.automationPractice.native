@@ -1,24 +1,23 @@
 package utilities;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebDriver;
 
-public class AlertHandler {
-	private  WebDriver driver ;
-	private  Alert alert ;
+import heroku.page.objectsa.PageBase;
+
+public class AlertHandler extends PageBase{
 	
-	public AlertHandler(WebDriver driver) {
-		this.driver = driver;
-	}
+	private static Alert alert ;
+	
+	
 
-	public  void acceptAlert() {
+	public static void acceptAlert() {
 		alert =driver.switchTo().alert();
 		alert.accept();
 		
 	}
 	
 	
-	public  String  getAlertText() {
+	public static String  getAlertText() {
 		alert =driver.switchTo().alert();
 		return alert.getText();
 	}
