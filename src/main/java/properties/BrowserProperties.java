@@ -42,7 +42,7 @@ public class BrowserProperties {
 		case "edge":
 			WebDriverManager.edgedriver().setup();
 			EdgeOptions edgeOptions = new EdgeOptions();
-			if(headless == true) {
+			if(headless ) {
 				edgeOptions.addArguments("--headless");
 			}
 			driver =new EdgeDriver(edgeOptions);
