@@ -31,4 +31,5 @@ public class RegisterationPage {
 		driver.findElement(firstNameField).sendKeys(email);
 	}
 
+	
 }

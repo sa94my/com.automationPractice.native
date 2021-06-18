@@ -1,15 +1,10 @@
 package heroku.page.objectsa;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
-public class NestedFramesPage {
+public class NestedFramesPage extends PageBase{
 
-	private WebDriver driver ;
 	
-	public NestedFramesPage(WebDriver driver) {
-		this.driver = driver;
-	}
 	
 	private void switchToNestedFrame(String ...frames) {
 		for(String frame : frames) {
@@ -23,6 +18,5 @@ public class NestedFramesPage {
 		driver.switchTo().defaultContent();
 		return frameText;
 	}
-	
 	
 }

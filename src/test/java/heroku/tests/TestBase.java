@@ -1,28 +1,30 @@
 package heroku.tests;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
-import heroku.page.objectsa.HomePage;
+import heroku.page.objectsa.PageBase;
 import properties.BrowserProperties;
 
 public class TestBase {
 
 	private WebDriver driver ;
-	protected HomePage homeObject;
 	
-	@BeforeClass
+
+	@BeforeTest
 	public void setUp() {
 		//get browser type and options from properties file
 		driver = BrowserProperties.getBrowserProperties();
 		driver.manage().window().maximize();
 		driver.get("https://the-internet.herokuapp.com/");
-		
-		homeObject = new HomePage(driver);
+		PageBase pageBaseObject = new PageBase();
+		pageBaseObject.setWebDriver(driver);
 	}
 	
-	@AfterClass
+	
+	
+	@AfterTest
 	public void tearDown() {
 		driver.quit();
 	}
