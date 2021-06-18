@@ -1,4 +1,4 @@
-package page.objects;
+package nop.commerce.page.objects;
 
 import java.time.Duration;
 
@@ -12,7 +12,6 @@ public class NotebooksPage {
 
 	private WebDriver driver;
 	private WebDriverWait wait ;
-	private Select sortingDropDown ;
 
 	private By sortBy = By.id("products-orderby");
 	private By firstProduct = By.xpath("(//div[@class='product-item'])[1]");
@@ -35,6 +34,7 @@ public class NotebooksPage {
 	 * @param index values 0 to 5
 	 */
 	public void sortBy(int index) {
+		Select sortingDropDown ;
 		sortingDropDown = new Select(driver.findElement(sortBy));
 		sortingDropDown.selectByIndex(index);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(5));

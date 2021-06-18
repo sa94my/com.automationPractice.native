@@ -19,50 +19,47 @@ public class BrowserProperties {
 	private static boolean headless ;
 	private static Properties browserOptions ;
 
-	
+
 	public static WebDriver getBrowserProperties() {
 		WebDriver driver;
 		ChromeOptions options ;
 		browserOptions = PropertiesLoader.loadProperties(browserPropertiesFilePath);
 		browserName = browserOptions.getProperty("browserName", "chrome");
 		headless = Boolean.parseBoolean(browserOptions.getProperty("headless", "false"));
-		
+
 		switch (browserName) {
+		
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			options = new ChromeOptions();
-			
 			if(headless == true) {
 				options.addArguments("--headless");
 			}
 			driver =new ChromeDriver(options);
-				
 			break;
+			
+			
 		case "edge":
 			WebDriverManager.edgedriver().setup();
 			EdgeOptions edgeOptions = new EdgeOptions();
-			
 			if(headless == true) {
 				edgeOptions.addArguments("--headless");
 			}
 			driver =new EdgeDriver(edgeOptions);
-				
 			break;
+
 			
 		case "firefox":
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions ffOptions = new FirefoxOptions();
-			if(headless == true) {
-				ffOptions.setHeadless(true);
-			}
+			ffOptions.setHeadless(headless);
 			driver =new FirefoxDriver(ffOptions);
-
 			break;
 
+			
 		default:
 			WebDriverManager.chromedriver().setup();
-			 options = new ChromeOptions();
-			 
+			options = new ChromeOptions();
 			if(headless == true) {
 				options.addArguments("--headless");
 			}
@@ -71,7 +68,7 @@ public class BrowserProperties {
 		}
 		return driver ;
 	}
-	
-	
-	
+
+
+
 }

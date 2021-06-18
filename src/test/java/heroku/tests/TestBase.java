@@ -1,10 +1,10 @@
-package tests;
+package heroku.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import nop.commerce.page.objects.HomePage;
+import heroku.page.objectsa.HomePage;
 import properties.BrowserProperties;
 
 public class TestBase {
@@ -17,7 +17,7 @@ public class TestBase {
 		//get browser type and options from properties file
 		driver = BrowserProperties.getBrowserProperties();
 		driver.manage().window().maximize();
-		driver.get("https://demo.nopcommerce.com/");
+		driver.get("https://the-internet.herokuapp.com/");
 		
 		homeObject = new HomePage(driver);
 	}

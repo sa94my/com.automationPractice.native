@@ -1,4 +1,4 @@
-package page.objects;
+package nop.commerce.page.objects;
 
 import java.time.Duration;
 

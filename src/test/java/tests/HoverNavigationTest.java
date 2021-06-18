@@ -4,7 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
-import page.objects.CellPhones;
+import nop.commerce.page.objects.CellPhones;
 
 public class HoverNavigationTest extends TestBase{
 
