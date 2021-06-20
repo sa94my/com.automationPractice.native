@@ -5,7 +5,7 @@
 		<classes>
 			<class name="heroku.tests.ContextClickTest" />
 			<class name="heroku.tests.NestedFramesTest" />
-			
+			<class name="heroku.tests.ModalTest"/>
 
 		</classes>
 	</test>

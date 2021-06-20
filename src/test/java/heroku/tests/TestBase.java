@@ -1,11 +1,14 @@
 package heroku.tests;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import heroku.page.objectsa.PageBase;
 import properties.BrowserProperties;
+import utilities.Screenshot;
 
 public class TestBase {
 
@@ -22,7 +25,12 @@ public class TestBase {
 		pageBaseObject.setWebDriver(driver);
 	}
 	
-	
+	@AfterMethod
+	public void onFailure(ITestResult result){
+		if(result.getStatus()==ITestResult.FAILURE) {
+			Screenshot.takeScreenshot(result.getName());
+		}
+	}
 	
 	@AfterTest
 	public void tearDown() {

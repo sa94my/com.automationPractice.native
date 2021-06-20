@@ -14,4 +14,9 @@ public class HomePage extends PageBase{
 		driver.get("https://the-internet.herokuapp.com/nested_frames");
 		
 	}
+	
+	public void goHome() {
+		driver.get("https://the-internet.herokuapp.com/");
+		
+	}
 }

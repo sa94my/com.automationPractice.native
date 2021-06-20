@@ -17,6 +17,9 @@ local.properties
 # drivers
 Drivers/
 
+#failure Screenshots
+screenshots/
+
 # External tool builders
 .externalToolBuilders/
 
